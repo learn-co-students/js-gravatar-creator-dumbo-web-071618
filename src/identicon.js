@@ -1,3 +1,10 @@
 class Identicon {
-  // make use of the md5.array method, which is in scope because we required it in our index.html
+    constructor(string)   {
+        console.log(string)
+        this.md5Array = md5.array(string)
+    }
+
+    getRgb()    {
+        return `rgb(${this.md5Array[0]}, ${this.md5Array[1]}, ${this.md5Array[2]}`
+    }
 }
